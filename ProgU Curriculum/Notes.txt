@@ -1,0 +1,72 @@
+compiler allocates a certain amount of memory for different types of numbers
+
+there are 8 primitive types for numbers, characters and boolean (true/false)
+
+Numeric Data Types
+byte 8-bits (-2^7 - 2^7), -128 to 127
+short 16-bits -32768 to 32767
+int 32-bits -2147483648 to 2147483647
+long 64-bits -9223372036854775808 to 9223372036854775807
+float 32-bit IEEE 754
+	Negative: -3.4028235E + 38 to -1.4E - 45
+	Positive: 1.4E - 45 to 3.4028235E + 38
+double 64-bit IEEE 754
+	Negative: -1.7976931348623157E + 308 to -4.9E - 324
+	Positive: 4.9E - 324 to 1.7976931348623157E + 308
+	
+Four types of integers byte, short, int, long
+	-use what is most appropriate, don't use large types for small numbers
+
+Two types of floating-pont numbers, float and double
+	double is twice as big as float, it has double precision of float
+	double is generally more accurate
+	
+nextByte(), nextShort(), nextInt(), nextLong(), nextFloat(), nextDouble()
+	byte byteValue = input.nextBye();, short shortValue = input.nextShort();,
+	int intValue = input.nextInt();, long longValue = input.nextLong();,
+	float floatValue = input.nextFloat();
+	- entering 128 for byte returns out of range error
+	
++ Addition, - subtraction, * multiplication, / division, % remainder
+	/ integers results in integer, use decimal to get float
+	% or "modulo" returns remainder
+	% only returns negative number if dividend is negative
+		-26 % -8 returns -8, 20 % -13 returns 7
+		
+A number % 2 returns 0 if it is even and 1 if it is odd.
+
+If today is Saturday, what day will it be in 10 days?
+	(Day 6 = saturday, after 10 days) % 7 days in a week = day 2 in week is tuesday
+	(6 + 10) % 7 = 2
+	
+Getting amount of minutes and seconds from total seconds
+
+[19]
+
+nextInt() on line 8 reading in seconds
+line 10 /, line 11 %
+
+exponents Math.pow(x, y) x^y, pow is method inside Math class
+	Math.PI
+	Math.pow(2^2) = 4, Math.pow(3^3) = 9, Math.pow (4^4) = 16
+	
+A large integer like 2147483648 needs an L at the end like 2147483648L to denote it as
+	a long integer, int can only go up to 2147483687. Make sure to use upper case
+	L, l looks like 1
+	
+Display hex numbers by putting 0b, 0B, 0x, 0X or 0 in front of hex code
+	System.out.println(081111); // Displays 15, 07777 = 4095, 0XFFFF = 65535
+	
+You can make an integer double by putting D at the end and float by putting F at the end
+	System.out.println(1.0 / 3.0); displays 0.3333333333333333 16 Digits
+	System.out.println(1/0F / 3.0F); displays 0.33333334 8 Digits
+	
+Scientific notation, 123.456 is 1.23456 x 10^2, this can be written as code like:
+	1.23456E+2, 1.23456E-2 for 10^-2
+	
+You can declare numbers with underscores for improve readability, java ignores the underscores when number
+is actually displayed
+	long ssn = 232_45_4519;
+	long creditCardNumber = 2324_4545_4519_3415L
+	
+*2.11 next
